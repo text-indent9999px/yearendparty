@@ -1,19 +1,28 @@
 <html>
   <head>
     <style>
-      html, body, .hello-parent {
+      
+      html, body{
+        overflow-x: hidden;
+      }
+      
+      
+      html, body, .yep_section {
       height: 100%;
       width: 100%;
       margin: 0;
+      overflow-x: hidden;
     }
 
     .hello-parent {
       display: flex;
+      /*
       background: #fff;
       background: -webkit-radial-gradient(#fff, #eaeaea); 
       background: -o-radial-gradient(#fff, #eaeaea); 
       background: -moz-radial-gradient(#fff, #eaeaea);
       background: radial-gradient(#fff, #eaeaea); 
+      */
     }
 
     .hello-word {
@@ -305,7 +314,7 @@
   <body>
     
     <!-- This is a recreation of the SVG animation that can be found on Wokine.com -->
-    <div class="hello-parent">
+    <div class="hello-parent yep_section">
       <svg class="hello-word" width="365" height="365" viewBox="0 0 365 365">
         <g id="H-letter">
         <line class="H-left-stroke" x1="17" y1="0" x2="17" y2="124" stroke="#000" fill="none" stroke-width="34" />
@@ -337,9 +346,12 @@
         </g>
       </svg>
     </div>
+  
+    <div class="yep_section">
+      <canvas id="canvas"></canvas>
+    </div>
 
-
-    <canvas id="canvas"></canvas>
+    
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script>
       let canvas = document.getElementById("canvas");
